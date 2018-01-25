@@ -1,0 +1,194 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "wfm@mail.ru",
+      "password": "12345678",
+      "name": "Администратор"
+    },
+    {
+      "email": "a@mail.ru",
+      "password": "12345678",
+      "name": "goshaha",
+      "id": 2
+    },
+    {
+      "email": "test@mail.ru",
+      "password": "12345678",
+      "name": "test",
+      "id": 3
+    },
+    {
+      "email": "new@mail.ru",
+      "password": "12345678",
+      "name": "new",
+      "id": 4
+    }
+  ],
+  "bill": {
+    "value": 96032,
+    "currency": "RUB"
+  },
+  "categories": [
+    {
+      "name": "Дом",
+      "capacity": 15000,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 10000,
+      "id": 2
+    },
+    {
+      "name": "Машина",
+      "capacity": 6999,
+      "id": 3
+    },
+    {
+      "name": "as",
+      "capacity": 102,
+      "id": 4
+    },
+    {
+      "name": "my",
+      "capacity": 120,
+      "id": 5
+    },
+    {
+      "name": "as",
+      "capacity": 123,
+      "id": 6
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 1250,
+      "category": 2,
+      "date": "12.06.2017 19:49:02",
+      "description": "Подарили еду в гостях"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "Купил посудомоечную машину"
+    },
+    {
+      "type": "income",
+      "amount": 1480,
+      "category": 2,
+      "date": "17.06.2017 14:00:48",
+      "id": 3,
+      "description": "Поход в окей с баллами. Бесплатная еда"
+    },
+    {
+      "type": "outcome",
+      "amount": 2470,
+      "category": 2,
+      "date": "17.06.2017 14:00:58",
+      "id": 4,
+      "description": "Закупка на неделю"
+    },
+    {
+      "type": "outcome",
+      "amount": 4000,
+      "category": 3,
+      "date": "10.06.2017 14:01:58",
+      "id": 5,
+      "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "income",
+      "amount": 1111,
+      "category": 2,
+      "date": "26.11.2017 13:43:12",
+      "description": "test",
+      "id": 6
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 1,
+      "date": "26.11.2017 13:54:58",
+      "description": "er",
+      "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 1,
+      "date": "26.11.2017 13:55:57",
+      "description": "root",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 500,
+      "category": 3,
+      "date": "26.11.2017 17:15:38",
+      "description": "some description here",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 2500,
+      "category": 3,
+      "date": "26.11.2017 17:17:00",
+      "description": "more description",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 3,
+      "date": "26.11.2017 17:18:07",
+      "description": "ddd",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 4,
+      "date": "26.11.2017 21:08:41",
+      "description": "for qwe",
+      "id": 12
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 4,
+      "date": "26.11.2017 21:08:42",
+      "description": "for qwe",
+      "id": 13
+    },
+    {
+      "type": "outcome",
+      "amount": 10,
+      "category": 5,
+      "date": "26.11.2017 21:43:32",
+      "description": "for my",
+      "id": 14
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": 5,
+      "date": "26.11.2017 22:15:51",
+      "description": "new for my",
+      "id": 15
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": 5,
+      "date": "26.11.2017 22:15:51",
+      "description": "new for my",
+      "id": 16
+    }
+  ]
+}

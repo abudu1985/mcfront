@@ -1,0 +1,25 @@
+<article class="content">
+  <div class="title-block">
+    <h3 class="title">
+      Страница истории <span class="sparkline bar"></span>
+    </h3>
+  </div>
+
+  <div class="text-center" *ngIf="!isLoaded">
+    Loading...
+  </div>
+  <div *ngIf="isLoaded">
+    <gosh-history-chart [data]="chartData"></gosh-history-chart>
+
+    <gosh-history-events
+        [categories]="categories"
+        [events]="events"
+    ></gosh-history-events>
+
+    <gosh-history-filter></gosh-history-filter>
+  </div>
+
+
+</article>
+<!--CONTENT-->
+<!--MODAL-->
