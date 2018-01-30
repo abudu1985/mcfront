@@ -7,6 +7,7 @@ import {PlanningPageComponent} from "./planning-page/planning-page.component";
 import {RecordsPageComponent} from "./records-page/records-page.component";
 import {HistoryDetailComponent} from "./history-page/history-detail/history-detail.component";
 import {AdvertsPageComponent} from "./adverts-page/adverts-page.component";
+import {AdvertFormComponent} from "./adverts-page/advert-form/advert-form.component";
 
 const routes: Routes = [
     {path: 'system', component: SystemComponent, children:[
@@ -15,7 +16,9 @@ const routes: Routes = [
         {path: 'planning', component: PlanningPageComponent},
         {path: 'records', component: RecordsPageComponent},
         {path: 'history/:id', component: HistoryDetailComponent},
-        {path: 'adverts', component: AdvertsPageComponent}
+        {path: 'adverts', component: AdvertsPageComponent},
+        {path: 'advert-form', component: AdvertFormComponent}
+
     ]}
 ];
 

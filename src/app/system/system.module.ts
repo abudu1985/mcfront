@@ -34,6 +34,7 @@ import {AngularFireDatabase} from "angularfire2/database-deprecated";
 import {AdvertService} from "./shared/services/advert.service";
 import {MessageComponent} from "./adverts-page/mes/message/message.component";
 import { AdvertFormComponent } from './adverts-page/advert-form/advert-form.component';
+import {TypeaheadModule} from "ngx-bootstrap";
 
 @NgModule({
     imports: [CommonModule,
@@ -43,7 +44,8 @@ import { AdvertFormComponent } from './adverts-page/advert-form/advert-form.comp
         AngularFireDatabaseModule,
         AngularFireAuthModule,
         AngularFireModule.initializeApp(environment.firebase),
-    ],
+        TypeaheadModule.forRoot()
+],
     declarations: [BillPageComponent,
         HistoryPageComponent,
         PlanningPageComponent,
