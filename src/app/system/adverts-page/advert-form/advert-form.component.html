@@ -1,9 +1,187 @@
-<pre class="card card-block card-header">Model: {{myForm.value.state | json}}</pre>
-<form [formGroup]="myForm">
-  <input formControlName="state"
-         [typeahead]="states"
-         [typeaheadOptionsLimit]="7"
-         [typeaheadMinLength]="2"
-         placeholder="Typeahead inside a form"
-         class="form-control">
+<!--<pre class="card card-block card-header">Model: {{myForm.value.state | json}}</pre>-->
+<!--<form [formGroup]="myForm">-->
+  <!--<input formControlName="state"-->
+         <!--[typeahead]="states"-->
+         <!--[typeaheadOptionsLimit]="7"-->
+         <!--[typeaheadMinLength]="2"-->
+         <!--placeholder="Typeahead inside a form"-->
+         <!--class="form-control">-->
+<!--</form>-->
+
+<form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Form Name -->
+    <div>Создать обьявление</div>
+
+    <!-- City -->
+    <div class="form-group"  [ngClass]="{'has-error': form.get('city').invalid && form.get('city').touched}">
+      <label  for="city">City</label>
+      <!--<div class="col-md-9">-->
+        <input
+                id="city"
+                class="form-control input-md"
+                formControlName="city"
+                type="text"
+                placeholder="city"
+                [typeahead]="states"
+                [typeaheadOptionsLimit]="7"
+                [typeaheadMinLength]="2"
+        >
+        <span *ngIf="form.get('city').invalid && form.get('city').touched"
+              class="form-help-text"
+        >Название города не может быть пустым.</span>
+      <!--</div>-->
+    </div>
+
+
+    <!-- Select Currency -->
+    <div class="form-group" [ngClass]="{'has-error': form.get('currency').invalid && form.get('currency').touched}">
+      <label for="currency">Currency</label>
+      <!--<div class="col-md-9">-->
+        <select
+                class="form-control"
+                id="currency"
+                required
+                [ngModel]="USD"
+                formControlName="currency"
+        >
+          <option
+                  *ngFor="let c of currencies"
+                  [value]="c"
+          >
+            {{c}}
+          </option>
+        </select>
+      <!--</div>-->
+    </div>
+
+    <!-- Rate-->
+    <div class="form-group" [ngClass]="{'has-error': form.get('rate').invalid && form.get('rate').touched}">
+      <label for="cur_rate">Курс</label>
+      <!--<div class="col-md-9">-->
+        <input
+                type="text"
+                id="cur_rate"
+                class="form-control"
+                placeholder="rate"
+                formControlName="rate"
+        >
+        <span
+                *ngIf="form.get('rate').invalid && form.get('rate').touched"
+                class="form-help-text"
+        >Введите ваш курс.</span>
+      <!--</div>-->
+
+    </div>
+
+    <!-- Amount-->
+    <div class="form-group"   [ngClass]="{'has-error': form.get('amount').invalid && form.get('amount').touched}">
+      <label for="amount">Amount</label>
+      <!--<div class="col-md-9">-->
+        <input
+                type="text"
+                id="amount"
+                class="form-control"
+                placeholder="amount"
+                formControlName="amount"
+        >
+        <span
+                *ngIf="form.get('amount').invalid && form.get('amount').touched"
+                class="form-help-text"
+        >Поле сумма не может быть пустым.</span>
+      <!--</div>-->
+    </div>
+
+    <!-- Wish -->
+    <div class="form-group">
+      <label for="radios-buy">Wish</label>
+      <!--<div class="col-md-9">-->
+        <label class="radio-inline" for="radios-buy">
+          <input
+                  type="radio"
+                  formControlName="wish"
+                  id="radios-buy"
+                  value="buy"
+                  checked="checked"
+          >
+          Купить
+        </label>
+        <label class="radio-inline" for="radios-sale">
+          <input
+                  type="radio"
+                  formControlName="wish"
+                  id="radios-sale"
+                  value="sale"
+          >
+          Продать
+        </label>
+      <!--</div>-->
+    </div>
+
+    <!-- Time-->
+    <div class="form-group"   [ngClass]="{'has-error': form.get('expiry_time').invalid && form.get('expiry_time').touched}">
+      <!--<label for="timepick">Active Time</label>-->
+      <!--&lt;!&ndash;<div class="col-md-9">&ndash;&gt;-->
+        <!--<input-->
+                <!--id="timepick"-->
+                <!--formControlName="expiry_time"-->
+                <!--type="text"-->
+                <!--placeholder="time"-->
+                <!--class="form-control input-md ui-timepicker-input"-->
+        <!--&gt;-->
+        <!--<span-->
+                <!--*ngIf="form.get('expiry_time').invalid && form.get('expiry_time').touched"-->
+                <!--class="form-help-text"-->
+        <!--&gt;Поле срока действия не может быть пустым.</span>-->
+      <!--</div>-->
+
+        <input type="time" atp-time-picker formControlName="expiry_time" class="form-control" theme="dark" locale='eu' start='1:30' end="23:00" arrowStyle="{'background': 'red', 'color': 'white'}"/>
+    </div>
+
+    <!-- Info -->
+    <div class="form-group"   [ngClass]="{'has-error': form.get('info').invalid && form.get('info').touched}">
+      <label for="deal_info">Info</label>
+      <!--<div class="col-md-9">-->
+    <textarea
+            class="form-control"
+            id="deal_info"
+            formControlName="info"
+    >info about deal and location</textarea>
+        <span
+                *ngIf="form.get('info').invalid && form.get('info').touched"
+                class="form-help-text"
+        >Поле описания не может быть пустым.</span>
+      <!--</div>-->
+    </div>
+
+    <!-- Telephon-->
+    <div class="form-group"   [ngClass]="{'has-error': form.get('telephon').invalid && form.get('telephon').touched}">
+      <label for="telephon">Telephone</label>
+      <!--<div class="col-md-9">-->
+        <input
+                id="telephon"
+                formControlName="telephon"
+                type="text"
+                placeholder="telephone"
+                class="form-control input-md"
+        >
+        <span
+                *ngIf="form.get('telephon').invalid && form.get('telephon').touched"
+                class="form-help-text"
+        >Введите номер телефона</span>
+      <!--</div>-->
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="form.invalid"
+      >Создать</button>
+    </div>
+
 </form>
+
+
+

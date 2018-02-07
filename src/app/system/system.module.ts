@@ -35,6 +35,14 @@ import {AdvertService} from "./shared/services/advert.service";
 import {MessageComponent} from "./adverts-page/mes/message/message.component";
 import { AdvertFormComponent } from './adverts-page/advert-form/advert-form.component';
 import {TypeaheadModule} from "ngx-bootstrap";
+import {CityService} from "./shared/services/city.service";
+import {AdvertsSqlService} from "./shared/services/advert-sql.service";
+import {AdvertFormDataService} from "./shared/services/advert-form-data.service";
+import { AmazingTimePickerService } from 'amazing-time-picker';
+import { AmazingTimePickerModule } from 'amazing-time-picker'; // this line you need
+//import { Ng2InputMaskModule } from 'ng2-input-mask';
+
+
 
 @NgModule({
     imports: [CommonModule,
@@ -44,7 +52,9 @@ import {TypeaheadModule} from "ngx-bootstrap";
         AngularFireDatabaseModule,
         AngularFireAuthModule,
         AngularFireModule.initializeApp(environment.firebase),
-        TypeaheadModule.forRoot()
+        TypeaheadModule.forRoot(),
+        AmazingTimePickerModule
+
 ],
     declarations: [BillPageComponent,
         HistoryPageComponent,
@@ -75,7 +85,11 @@ import {TypeaheadModule} from "ngx-bootstrap";
         EventsService,
         UrlService,
         AngularFireDatabase,
-        AdvertService
+        AdvertService,
+        CityService,
+        AdvertsSqlService,
+        AdvertFormDataService,
+        AmazingTimePickerService
     ]
 })
  export class SystemModule {}

@@ -21,9 +21,15 @@
       "styles": [
         "styles.scss",
         "./assets/vendor.css",
-        "./assets/theme.css"
+        "./assets/theme.css",
+        "./assets/css/timepicker.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js",
+        "./assets/js/jquery.timepicker.min.js",
+        "./assets/js/timepicker.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
