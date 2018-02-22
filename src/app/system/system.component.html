@@ -1,12 +1,26 @@
-<div class="main-wrapper">
-    <div class="app">
-        <gosh-header></gosh-header>
+<!--<div class="main-wrapper">-->
+    <!--<div class="app">-->
+        <!--<gosh-header></gosh-header>-->
 
-        <gosh-sidebar></gosh-sidebar>
+        <!--<gosh-sidebar></gosh-sidebar>-->
 
-        <article class="content dashboard-page">
-            <router-outlet></router-outlet>
-        </article>
+        <!--<article class="content dashboard-page">-->
+            <!--<router-outlet></router-outlet>-->
+        <!--</article>-->
 
-    </div>
-</div>
+    <!--</div>-->
+<!--</div>-->
+
+<button (click)="toggleMenu()" class="hamburger">
+    <span>toggle menu</span>
+</button>
+
+<h1>
+    {{title}}
+</h1>
+
+<article class="content dashboard-page">
+<router-outlet></router-outlet>
+</article>
+
+<nav-menu [@slideInOut]="menuState" (toggleMenu)="toggleMenu()"></nav-menu>

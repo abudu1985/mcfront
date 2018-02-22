@@ -39,7 +39,8 @@ import {CityService} from "./shared/services/city.service";
 import {AdvertsSqlService} from "./shared/services/advert-sql.service";
 import {AdvertFormDataService} from "./shared/services/advert-form-data.service";
 import { AmazingTimePickerService } from 'amazing-time-picker';
-import { AmazingTimePickerModule } from 'amazing-time-picker'; // this line you need
+import { AmazingTimePickerModule } from 'amazing-time-picker';
+import {NavComponent} from "./shared/components/nav/nav.component"; // this line you need
 //import { Ng2InputMaskModule } from 'ng2-input-mask';
 
 
@@ -77,7 +78,8 @@ import { AmazingTimePickerModule } from 'amazing-time-picker'; // this line you 
         FilterPipe,
         AdvertsPageComponent,
         MessageComponent,
-        AdvertFormComponent
+        AdvertFormComponent,
+        NavComponent
     ],
     providers: [
         BillService,

@@ -11,8 +11,12 @@ export class HeaderComponent implements OnInit {
 
   date: Date = new Date();
   user: string;
+
   constructor(private  authService: AuthService,
               private router: Router) { }
+
+
+
 
   ngOnInit() {
     this.user = this.authService.getUserName();

@@ -20,7 +20,7 @@
           [ngModelOptions]="{standalone: true}"
         >
           <option
-            *ngFor="let c of categories"
+            *ngFor="let c of categories; let i = index"
             [value]="c.id"
           >
             {{c.name}}

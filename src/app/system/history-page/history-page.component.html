@@ -10,13 +10,18 @@
   </div>
   <div *ngIf="isLoaded">
     <gosh-history-chart [data]="chartData"></gosh-history-chart>
-
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-10">
     <gosh-history-events
         [categories]="categories"
         [events]="events"
     ></gosh-history-events>
 
-    <gosh-history-filter></gosh-history-filter>
+       <gosh-history-filter></gosh-history-filter>
+  </div>
+  </div>
+</div>
   </div>
 
 

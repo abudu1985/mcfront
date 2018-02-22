@@ -10,15 +10,15 @@
 
 <section class="section" *ngIf="isLoaded">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-xs-offset-2">
       <gosh-add-event [categories]="categories"></gosh-add-event>
     </div>
-    <div class="col-md-6">
+
+    <div class="col-md-6 col-xs-offset-2">
       <gosh-add-category (onCategoryAdd)="newCategoryAdded($event)"></gosh-add-category>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
+
+    <div class="col-md-6 col-xs-offset-2">
       <gosh-edit-category
         [categories]="categories"
         (onCategoryEdit)="categoryWasEdited($event)"

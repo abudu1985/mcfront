@@ -19,12 +19,14 @@ export class RecordsPageComponent implements OnInit {
     this.categoriesService.getCategories()
       .subscribe((categories: Category[]) => {
         this.categories = categories;
+        console.log(this.categories);
         this.isLoaded = true;
       });
   }
 
   newCategoryAdded(category: Category) {
-    this.categories.push(category);
+    this.categories.push(category['category']);
+    console.log(this.categories);
   }
 
   categoryWasEdited(category: Category) {

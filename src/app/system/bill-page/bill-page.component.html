@@ -12,8 +12,17 @@
   <div class="row text-center" *ngIf="!isLoaded">
     Loading...
   </div>
-  <div class="row" *ngIf="isLoaded">
-<gosh-bill-card [bill]="bill" [currency]="currency"></gosh-bill-card>
-    <gosh-currency-card [currency]="currency"></gosh-currency-card>
+  <div *ngIf="isLoaded">
+
+    <div class="row">
+      <div class="col-md-6 col-xs-offset-2">
+         <gosh-bill-card [bill]="bill" [currency]="currency"></gosh-bill-card>
+      </div>
+
+      <div class="col-md-6 col-xs-offset-2">
+         <gosh-currency-card [currency]="currency"></gosh-currency-card>
+      </div>
+    </div>
   </div>
 </section>
+
